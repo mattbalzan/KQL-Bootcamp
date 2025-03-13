@@ -1,0 +1,11 @@
+// Parse JSON data example
+// also... | where Tags matches regex @'^\s*\{.*\}|\[.*\]\s*$'
+// matt balzan | mattGPT | 13-03-2025
+let tagFilter = "diskSizeMB";                     // Construct the tagFilter
+let tagSearch = strcat("vm.azm.ms/", tagFilter);  // Construct the tagSearch 
+InsightsMetrics
+| where TimeGenerated > ago (480d)                // grab the older rows
+| where Tags contains tagFilter                   // filter Tags on tagFilter
+| extend t = parse_json(Tags)                     // parse the Tags json object 
+| extend DiskSize = toint(t.[tagSearch])          // convert tagSearch to integer (so that we can bin round up)
+| project Computer, bin(DiskSize,1)               // display the Computer & DiskSize (rounded up value) columns
