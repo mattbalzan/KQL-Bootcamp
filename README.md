@@ -1,1 +1,1 @@
-# KQL-Bootcamp
+# KQL-Bootcamp script examples
