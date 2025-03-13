@@ -1,0 +1,8 @@
+// Parse XML data from a row
+SecurityEvent 
+| where TimeGenerated > ago (480d)
+| where EventID == 8002
+| extend x = parse_xml(EventData)
+| extend XMLData = x.UserData.RuleAndFileData.RuleSddl
+| project Computer, XMLData
+| take 5
