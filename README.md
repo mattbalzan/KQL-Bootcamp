@@ -9,6 +9,6 @@ KQL is optimized for fast, scalable data exploration and is particularly powerfu
 Origin of the Name "Kusto"
 The name Kusto comes from the famous explorer "Jacques Cousteau", known for his pioneering underwater exploration. Microsoft chose this name as a metaphor for "exploring the depths of data", similar to how Cousteau explored the depths of the ocean.
 
-The "Kusto Query Language (KQL)" is derived from this project name.
+KQL Cheat Sheet:
 
 ![image](https://github.com/user-attachments/assets/ce451f1d-4196-4993-9147-902fbaf95bda)
