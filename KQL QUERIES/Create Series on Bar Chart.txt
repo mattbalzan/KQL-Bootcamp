@@ -1,0 +1,4 @@
+SecurityEvent
+| where TimeGenerated > ago(480d)
+| summarize EventCount = count() by EventID
+| render columnchart with (title = "Security Events", series=EventCount)
