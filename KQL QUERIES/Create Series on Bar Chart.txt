@@ -1,4 +1,4 @@
 SecurityEvent
-| where TimeGenerated > ago(480d)
-| summarize EventCount = count() by EventID
-| render columnchart with (title = "Security Events", series=EventCount)
+| where TimeGenerated > ago(480d)                                          // filters results by date range
+| summarize EventCount = count() by EventID                                // aggregates EventID counts
+| render columnchart with (title = "Security Events", series=EventCount)   // displays column chart with EventID counts under each bar
