@@ -10,6 +10,7 @@ The name Kusto comes from the famous explorer "Jacques Cousteau", known for his 
 - KQL Introduction | https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-kql/1-introduction
 - Write your first query with KQL | https://learn.microsoft.com/en-us/training/modules/write-first-query-kusto-query-language/1-introduction
 - Analyse query results using KQL | https://learn.microsoft.com/en-us/training/modules/analyze-results-kusto-query-language/1-introduction
+- JOIN tables with KQL | https://learn.microsoft.com/en-gb/kusto/query/join-operator?view=azure-data-explorer
 - KQL Demo Environments | https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-kql/5-exercise?tabs=azure-monitor
 - KQL Exercises | https://learn.microsoft.com/en-us/training/modules/analyze-logs-with-kql/4-identify-machines-with-high-cpu
 - KQL Splunk to KQL Cheat Sheet | https://learn.microsoft.com/en-us/kusto/query/splunk-cheat-sheet?view=microsoft-fabric
