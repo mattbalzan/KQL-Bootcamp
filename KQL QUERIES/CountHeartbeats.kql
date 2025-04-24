@@ -1,0 +1,10 @@
+// https://ms.portal.azure.com#@72f988bf-86f1-41af-91ab-2d7cd011db47/blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade/resourceId/%2FDemo/source/LogsBlade.AnalyticsShareLinkToQuery/q/H4sIAAAAAAAAA22PsQrCMBCG9zzFP1qQVsTBRRcHXXQS97Q9baBJ5JIoFR%252FeK1rp0CVwue%252B7%252B68osPPJRTSkOZakY4Aqhk%252Fdtqi8vadIHMbIlb1FbAitDuL6xPlIm1SMmxJOnq1s6ebQN3KCeYfLMUAKYh0Jh2EC6CFA%252F3IHa5wsyNW%252Fq954NsSEs7G0%252F8k1tjLWz1brRZ0JEZK1ms2LRrmW2FR96FmGspP83%252BQCM7maWG5pk3VVIzzUB8Ogg%252FsuAQAA/limit/1000
+
+// Count heartbeats 
+// Count all computers heartbeats from the last hour. 
+// Count computers heartbeats in the last hour. 
+// Normally, agents on VMs generate Heartbeat event every minute.
+Heartbeat
+| where TimeGenerated > ago(480d)
+| summarize heartbeats2 =count() by Computer
+| render columnchart 
